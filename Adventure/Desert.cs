@@ -14,9 +14,11 @@ namespace Adventure
         //constructor
 
         //member methods
-        public void sharkBait()
+        public void rattleSnakes()
         {
-            Console.WriteLine("Choose a number between 1 and 3");
+            Console.WriteLine("Choose what you would like to do:");
+            Console.WriteLine("   1. Stand your ground");
+            Console.WriteLine("   2. Run away");
             userInput = Console.ReadLine();
 
             switch (userInput)
@@ -25,15 +27,20 @@ namespace Adventure
                     Environment.Exit(0);
                     break;
                 case "1":
-                    Console.WriteLine("You punch the shark in the nose as hard as you can.");
-                    Console.WriteLine("It swims away in defeat and you head back to the beach.");
-                    Console.ReadLine();
+                    Console.WriteLine("Somehow, you manage to successful wrestle all of the rattlesnakes and tie them into knots, unscatched.");
+                    Console.WriteLine("");
                     break;
                 case "2":
-                    Console.WriteLine("Unfortunately for you, this shark hasn't eaten in over a week.");
-                    Console.WriteLine("You try to punch it in the nose but that only makes it more irritated.");
-                    Console.WriteLine("It bites down on your leg.");
+                    Console.WriteLine("Poor choice, these suckers move fast.");
+                    Console.WriteLine("They all catch up to you and you sustain several bites.");
+                    Console.WriteLine("The venom kills you quickly.");
+                    Console.WriteLine("The end");
                     Console.ReadLine();
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("You've entered an invalid choice. Please try again.");
+                    rattleSnakes();
                     break;
 
             }
@@ -42,7 +49,10 @@ namespace Adventure
 
         public void cactusSpines()
         {
-            Console.WriteLine("Choose a number between 1 and 3 to find out what happens next.");
+
+            Console.WriteLine("Choose what you would like to do:");
+            Console.WriteLine("   1. Get water out of cactus");
+            Console.WriteLine("   2. Pull spines out to relieve pain");
             userInput = Console.ReadLine();
 
             switch (userInput)
@@ -52,15 +62,23 @@ namespace Adventure
                     break;
                 case "1":
                     Console.WriteLine("Even though you are in pain, you realize there is probably some water inside the cactus.");
-                    Console.WriteLine("");
-                    Console.WriteLine("");
+                    Console.WriteLine("You tap into the perfect spot and are able to rehydrate.");
+                    Console.WriteLine("You decide to take a nap before you start traveling again, and lay your head on a deathstalker scorpion.");
+                    Console.WriteLine("The venom kills you.");
+                    Console.WriteLine("The end.");
                     Console.ReadLine();
                     break;
                 case "2":
-                    Console.WriteLine("They think you're pretty neat.");
-                    Console.WriteLine("They bring all the rum from their ship onto the beach and you party together til the sun comes up.");
+                    Console.WriteLine("You pull out all of the spines, which takes over an hour.");
+                    Console.WriteLine("The combination of dehydration and infected wounds ultimately kills you.");
+                    Console.WriteLine("The end.");
                     Console.ReadLine();
                     break;
+                default:
+                    Console.WriteLine("You've entered an invalid choice. Please try again.");
+                    cactusSpines();
+                    break;
+
             }
         }
 
@@ -68,8 +86,9 @@ namespace Adventure
         public void desertMenu()
         {
             Console.WriteLine("An airplane has dropped you off in the middle of the Sahara Desert.");
-            Console.WriteLine("The weather is ");
-            Console.WriteLine("Choose a number between 1 and 4 to find out what happens next!");
+            Console.WriteLine("What do you want to do?");
+            Console.WriteLine("   1. Explore");
+            Console.WriteLine("   2. Find water");
             userInput = Console.ReadLine();
 
             switch (userInput)
@@ -80,8 +99,8 @@ namespace Adventure
                 case "1":
                     Console.WriteLine("You start walking and happen upon a family of rattlesnakes.");
                     Console.WriteLine("They all start to shake their rattles vigorously and the first one advances quickly towards you.");
-                    Console.WriteLine("Somehow, you manage to successful wrestle all of the rattlesnakes and tie them into knots, unscatched.");
-                    sharkBait();
+
+                    
                     break;
                 case "2":
                     Console.WriteLine("You realize quickly that you are becoming dehyrated and there is no water in sight.");
@@ -90,6 +109,11 @@ namespace Adventure
                     Console.WriteLine("When you come to, your body is full of cactus spines -- you gave the cactus a hug after mistaking it for another person.");
                     cactusSpines();
                     break;
+                default:
+                    Console.WriteLine("You've entered an invalid choice. Please try again.");
+                    desertMenu();
+                    break;
+
             }
         }
 

@@ -16,7 +16,9 @@ namespace Adventure
         //member methods
         public void sasquatchDinner()
         {
-            Console.WriteLine("Choose a number between 1 and 3");
+            Console.WriteLine("What do you do?");
+            Console.WriteLine("   1. Join him for dinner (you don't want to be rude) ");
+            Console.WriteLine("   2. Politely turn down the invitation");
             userInput = Console.ReadLine();
 
             switch (userInput)
@@ -31,10 +33,16 @@ namespace Adventure
                     Environment.Exit(0);
                     break;
                 case "2":
+                    Console.WriteLine("He won't take no for an answer - He points out you have no food with you.");
                     Console.WriteLine("Sasquatch and the rest of his family cook a rabbit stew.");
                     Console.WriteLine("You have great conversation, and they send you on your way with leftovers.");
                     Console.WriteLine("You are thankful for the warm meal, and promise not to tell anyone where they live.");
                     break;
+                default:
+                    Console.WriteLine("You've entered an invalid choice. Please try again.");
+                    sasquatchDinner();
+                    break;
+
 
             }
         }
@@ -42,7 +50,9 @@ namespace Adventure
 
         public void bearSnuggles()
         {
-            Console.WriteLine("Choose 1 or 2 to find out what happens next.");
+            Console.WriteLine("What you would like to do next?");
+            Console.WriteLine("   1. Stay still");
+            Console.WriteLine("   2. Try to escape");
             userInput = Console.ReadLine();
 
             switch (userInput)
@@ -53,14 +63,17 @@ namespace Adventure
                 case "1":
                     Console.WriteLine("You determine that you would rather be warm and just stay there.");
                     Console.WriteLine("Besides, it's sort of romantic to be snuggled up with someone (or something) under the stars.");
-                    Console.WriteLine("");
-                    Console.ReadLine();
+                    
                     break;
                 case "2":
                     Console.WriteLine("The bear starts snoring so you think its in deep enough sleep to make an escape.");
                     Console.WriteLine("");
-                    Console.ReadLine();
                     break;
+                default:
+                    Console.WriteLine("You've entered an invalid choice. Please try again.");
+                    bearSnuggles();
+                    break;
+
             }
         }
 
@@ -68,8 +81,9 @@ namespace Adventure
         public void forestMenu()
         {
             Console.WriteLine("An old school bus with blacked out windows dropped you off in the middle of a dense forest.");
-            Console.WriteLine("The weather looks ******");
-            Console.WriteLine("Choose 1 or 2 to find out what happens next!");
+            Console.WriteLine(" Do you want to:");
+            Console.WriteLine("   1. Explore");
+            Console.WriteLine("   2. Build shelter");
             userInput = Console.ReadLine();
 
             switch (userInput)
@@ -90,6 +104,11 @@ namespace Adventure
                     Console.WriteLine("The warmth is coming from the giant brown bear that has decided to snuggle with you.");
                     bearSnuggles();
                     break;
+                default:
+                    Console.WriteLine("You've entered an invalid choice. Please try again.");
+                    forestMenu();
+                    break;
+
             }
         }
 
