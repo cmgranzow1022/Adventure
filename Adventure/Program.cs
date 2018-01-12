@@ -11,7 +11,11 @@ namespace Adventure
         static void Main(string[] args)
         {
             Adventure newAdventure = new Adventure();
-
+            Player player = new Player();
+            player.chooseSupplies();
+            newAdventure.chooseEnvironment();
+            newAdventure.chooseEnding();
+            Console.ReadLine();
         }
     }
 }
