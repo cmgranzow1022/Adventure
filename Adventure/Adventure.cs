@@ -45,21 +45,24 @@ namespace Adventure
 
         public void chooseEnding()
         {
-            Console.WriteLine("How does it end? Enter 1,2 or 3.");
+            Console.WriteLine("Does your adventure have a happy ending? Choose 1 or 2 to find out.");
             userInput = Console.ReadLine();
             switch (userInput)
             {
-                case "1":
-                    Console.WriteLine("A helicopter spots you, picks you up and brings you home.");
+
+                case "0":
+                    Environment.Exit(0);
+                    break;
+                     case "1":
+                    Console.WriteLine("A helicopter spots you, picks you up and brings you home. You live happily ever after.");
                     break;
                 case "2":
                     Console.WriteLine("You woke up from your dream and decided to never travel again.");
                     break;
-                case "3":
-                    Console.WriteLine("You came to the realization that you would be stranded alone forever.");
-                    Console.WriteLine("You wished you would have brought a volleyball so you could have a Wilson like Tom Hanks did in Castaway");
-                    Console.WriteLine("...But you didn't, so you died alone.");
-                        break;
+                default:
+                    Console.WriteLine("You enetered an invalid number. Please try again.");
+                    chooseEnding();
+                    break;
             }
         }
 

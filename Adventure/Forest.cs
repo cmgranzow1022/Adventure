@@ -42,9 +42,7 @@ namespace Adventure
                     Console.WriteLine("You've entered an invalid choice. Please try again.");
                     sasquatchDinner();
                     break;
-
-
-            }
+                    }
         }
 
 
@@ -63,11 +61,14 @@ namespace Adventure
                 case "1":
                     Console.WriteLine("You determine that you would rather be warm and just stay there.");
                     Console.WriteLine("Besides, it's sort of romantic to be snuggled up with someone (or something) under the stars.");
-                    
+                    Console.WriteLine("The next morning the bear is gone when you wake up.");
                     break;
                 case "2":
                     Console.WriteLine("The bear starts snoring so you think its in deep enough sleep to make an escape.");
-                    Console.WriteLine("");
+                    Console.WriteLine("As you are sneaking away, the bear's mate walks up and assumes the worst.");
+                    Console.WriteLine("One swipe of their big claws kills you instantly.");
+                    Console.WriteLine("The end.");
+                    Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("You've entered an invalid choice. Please try again.");

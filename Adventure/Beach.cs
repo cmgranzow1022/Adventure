@@ -68,6 +68,7 @@ namespace Adventure
                     Console.WriteLine("Unfortunately for you, this shark hasn't eaten in over a week. It quickly catches up to you.");
                     Console.WriteLine("You try to punch it in the nose but that only makes it more irritated.");
                     Console.WriteLine("It bites down on your leg.");
+                    Console.WriteLine("You manage to get away and get back to shore.");
                     break;
                 default:
                     Console.WriteLine("You've entered an invalid choice. Please try again.");
@@ -94,12 +95,10 @@ namespace Adventure
                     Console.WriteLine("They take you prisoner on their ship.");
                     Console.WriteLine("You try to convince the crew you could live the Pirate life, but they don't budge.");
                     Console.WriteLine("They make you walk the plank");
-                    Console.ReadLine();
                     break;
                 case "2":
                     Console.WriteLine("They think you're pretty neat.");
                     Console.WriteLine("They bring all the rum from their ship onto the beach and you party together til the sun comes up.");
-                    Console.ReadLine();
                     break;
                 default:
                     Console.WriteLine("You've entered an invalid choice. Please try again.");
